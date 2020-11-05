@@ -50,14 +50,14 @@
 
         <br>
         <p>El primer paso para afiliarte es completar la <b>solicitud de afiliación</b> con tus datos personales, laborales, de contacto y documentación:</p>
-        <form>
+        <form novalidate="novalidate">
           <fieldset>
             <legend>Datos Personales</legend>
           
             <div class="row">
               <div class="form-group required col-md-6">
-                <label class="control-label" for="apellido">Apellido</label><br>
-                <input type="text" id="apellido" name="apellido" class="form-control" required>
+                <label class="control-label" for="apellidos">Apellidos</label><br>
+                <input type="text" id="apellidos" name="apellidos" class="form-control" required>
               </div>
               <div class="form-group required col-md-6">
                 <label class="control-label" for="nombres">Nombres</label><br>
@@ -78,13 +78,13 @@
 
             <div class="row">
               <div class="form-group required col-md-6">
-                <label class="control-label" for="Fecha">Fecha de Nacimiento</label>
-                <input type="date" id="Fecha" name="Fecha" class="form-control" required>
+                <label class="control-label" for="fecha_nacimiento">Fecha de Nacimiento</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control" required>
               </div>
               <div class="form-group required col-md-6">
                 <label class="control-label" for="nacionalidad">Nacionalidad</label>
-                <select class="custom-select" id="nacionalidad" required>
-                  <option selected></option>
+                <select class="custom-select" id="nacionalidad" name="nacionalidad" required>
+               
                   <option selected>Seleccione...</option>
                   <option value="argentino">Argentino</option>
                   <option value="extranjero">Extranjero</option>
@@ -95,7 +95,7 @@
             <div class="row">
               <div class="form-group required col-md-6">
                 <label class="control-label" for="genero">Genero</label>
-                <select class="custom-select" id="genero" required>
+                <select class="custom-select form-control" id="genero" name="genero" required>
                   <option selected>Seleccione...</option>
                   <option value="femenino">Femenino</option>
                   <option value="masculino">Masculino</option>
@@ -103,8 +103,8 @@
                 </select>
               </div>
               <div class="form-group required col-md-6">
-                <label class="control-label" for="genero">Estado Civil</label>
-                <select class="custom-select" id="estadoCivil" required>
+                <label class="control-label" for="estado_civil">Estado Civil</label>
+                <select class="custom-select" id="estado_civil" name="estado_civil" required>
                   <option selected>Seleccione...</option>
                   <option value="soltero">Soltero</option>
                   <option value="casado">Casado</option>
@@ -124,14 +124,14 @@
                 <input type="email" id="email" name="email" class="form-control" required>
               </div>
               <div class="form-group required col-md-6">
-                <label class="control-label" for="celular">Teléfono celular</label>
-                <input type="tel" id="celular" name="celular" class="form-control" required>
+                <label class="control-label" for="telefono">Teléfono celular</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control" required>
               </div>
             </div>
 
             <div class="form-check form-group required">
-              <input class="form-check-input" type="checkbox" value="domicilioElectronico" id="domicilioElectronico" required>
-              <label class="control-label" class="form-check-label" for="domicilioElectronico">
+              <input class="form-check-input" type="checkbox" value="domicilioElectronico" id="chk_domicilioElectronico" required>
+              <label class="control-label" class="form-check-label" for="chk_domicilioElectronico">
                 Acepto constituir mi casilla de correo como domicilio electrónico válido para toda notificación.
               </label>
             </div>
@@ -168,32 +168,9 @@
             
               <div class="form-group required col-md-6">
                 <label class="control-label" for="provincia">Provincia</label><br>
-                <select class="custom-select" id="provincia" class="form-control" required>
+                <select class="custom-select" id="provincia" name="provincia" class="form-control" required>
                   <option selected>Seleccione...</option>
-                  <option value="Ciudad Autónoma de Buenos Aires">Ciudad Autónoma de Buenos Aires</option>
-                  <option value="Buenos Aires">Buenos Aires</option>
-                  <option value="Catamarca">Catamarca</option>
-                  <option value="Chaco">Chaco</option>
-                  <option value="Chubut">Chubut</option>
-                  <option value="Córdoba">Córdoba</option>
-                  <option value="Corrientes">Corrientes</option>
-                  <option value="Entre Ríos">Entre Ríos</option>
-                  <option value="Formosa">Formosa</option>
-                  <option value="Jujuy">Jujuy</option>
-                  <option value="La Pampa">La Pampa</option>
-                  <option value="La Rioja">La Rioja</option>
-                  <option value="Mendoza">Mendoza</option>
-                  <option value="Misiones">Misiones</option>
-                  <option value="Neuquén">Neuquén</option>
-                  <option value="Río Negro">Río Negro</option>
-                  <option value="Salta">Salta</option>
-                  <option value="San Juan">San Juan</option>
-                  <option value="San Luis">San Luis</option>
-                  <option value="Santa Cruz">Santa Cruz</option>
-                  <option value="Santa Fe">Santa Fe</option>
-                  <option value="Santiago del Estero">Santiago del Estero</option>
-                  <option value="Tierra del Fuego">Tierra del Fuego</option>
-                  <option value="Tucumán">Tucumán</option>
+               
                 </select>
               </div>
             </div>
@@ -224,7 +201,17 @@
               <div class="form-group required col-md-6">
                 <label class="control-label" for="empleador_fecha_ingreso">Fecha de Ingreso</label>
                 <input type="date" id="empleador_fecha_ingreso" name="empleador_fecha_ingreso" class="form-control" required>
-              </div>
+              </div> 
+            </div>
+            <div class="row">
+              <div class="form-group required col-md-6">
+                <label class="control-label" for="empleador_ingresos_declarados">Ingresos mensuales</label>
+                <input type="number" id="empleador_ingresos_declarados" name="empleador_ingresos_declarados" class="form-control" required>
+              </div>    
+              <div class="form-group required col-md-6">
+                <label class="control-label" for="empleador_fecha_ingreso">Fecha de Ingreso</label>
+                <input type="date" id="empleador_fecha_ingreso" name="empleador_fecha_ingreso" class="form-control" required>
+              </div> 
             </div>
 
           <fieldset>
@@ -234,19 +221,19 @@
               <div class="form-group required col">
                 <label class="form-check-label">Realizo la mayor parte de mi trabajo desde: </label>
                 <div class="form-check form-check-inline required">
-                  <input class="form-check-input" type="radio" name="empleador_tipo_domicilio" id="empleador_sede" value="empleador_sede" required>
+                  <input class="form-check-input" type="radio" name="empleador_tipo_domicilio" id="empleador_sede" value="Sede Empleador" required>
                   <label class="form-check-label" for="empleador_sede">
                     Una sede de la empresa.
                   </label>
                 </div>
                 <div class="form-check form-check-inline required">
-                  <input class="form-check-input" type="radio" name="empleador_tipo_domicilio" id="coworking" value="coworking" required>
+                  <input class="form-check-input" type="radio" name="empleador_tipo_domicilio" id="coworking" value="Coworking" required>
                   <label class="form-check-label" for="coworking">
                     Un coworking.
                   </label>
                 </div>
                 <div class="form-check form-check-inline required">
-                  <input class="form-check-input" type="radio" name="empleador_tipo_domicilio" id="teletrabajo" value="teletrabajo" required>
+                  <input class="form-check-input" type="radio" name="empleador_tipo_domicilio" id="teletrabajo" value="Teletrabajo" required>
                   <label class="form-check-label" for="teletrabajo">
                     Mi casa.
                   </label>
@@ -286,32 +273,9 @@
             
               <div class="form-group required col-md-6">
                 <label class="control-label" for="empleador_provincia">Provincia</label><br>
-                <select class="custom-select" id="empleador_provincia" class="form-control" required>
+                <select class="custom-select" id="empleador_provincia" name="empleador_provincia" class="form-control" required>
                   <option selected>Seleccione...</option>
-                  <option value="Ciudad Autónoma de Buenos Aires">Ciudad Autónoma de Buenos Aires</option>
-                  <option value="Buenos Aires">Buenos Aires</option>
-                  <option value="Catamarca">Catamarca</option>
-                  <option value="Chaco">Chaco</option>
-                  <option value="Chubut">Chubut</option>
-                  <option value="Córdoba">Córdoba</option>
-                  <option value="Corrientes">Corrientes</option>
-                  <option value="Entre Ríos">Entre Ríos</option>
-                  <option value="Formosa">Formosa</option>
-                  <option value="Jujuy">Jujuy</option>
-                  <option value="La Pampa">La Pampa</option>
-                  <option value="La Rioja">La Rioja</option>
-                  <option value="Mendoza">Mendoza</option>
-                  <option value="Misiones">Misiones</option>
-                  <option value="Neuquén">Neuquén</option>
-                  <option value="Río Negro">Río Negro</option>
-                  <option value="Salta">Salta</option>
-                  <option value="San Juan">San Juan</option>
-                  <option value="San Luis">San Luis</option>
-                  <option value="Santa Cruz">Santa Cruz</option>
-                  <option value="Santa Fe">Santa Fe</option>
-                  <option value="Santiago del Estero">Santiago del Estero</option>
-                  <option value="Tierra del Fuego">Tierra del Fuego</option>
-                  <option value="Tucumán">Tucumán</option>
+                  
                 </select>
               </div>
             </div>
@@ -349,21 +313,21 @@
           </fieldset>
 
           <div class="form-check form-group required">
-            <input class="form-check-input" type="checkbox" value="cuota" id="cuota" required>
-            <label class="control-label form-check-label" for="cuota">
+            <input class="form-check-input" type="checkbox" value="cuota" id="chk_confirma" name="chk_confirma" required>
+            <label class="control-label form-check-label" for="chk_confirma">
               Comprendo que para mantener la condición de afiliado AGC debo abonar en tiempo y forma la cuota sindical equivalente al 3% de mi salario bruto.
             </label>
           </div>        
-
-          <button type="submit" class="btn btn-primary align-right">Solicitar afiliación</button>
+          <a id="btn_submit" class="btn btn-primary align-right">Solicitar afiliación</a>
+          
         </form>
         
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        
+                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+        <script src="../js/afiliados.js"></script>
         <!-- the main fileinput plugin file -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/js/fileinput.min.js"></script>
       </div>

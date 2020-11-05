@@ -16,7 +16,7 @@
     <!-- AGC CSS --> 
     <link rel="stylesheet" href="../css/styles.css">
 
-    <title>AGC :: Adhrerentes</title>
+    <title>AGC :: Adherentes</title>
   </head>
   <body>
     <div class="content">
@@ -113,14 +113,14 @@
 
         <p>Completá el formulario y adherí a tu organización sindical.</p> 
 
-        <form>
+        <form novalidate="novalidate">
           <fieldset>
             <legend>Datos Personales</legend>
           
             <div class="row">
               <div class="form-group required col-md-6">
-                <label class="control-label" for="apellido">Apellido</label><br>
-                <input type="text" id="apellido" name="apellido" class="form-control" required>
+                <label class="control-label" for="apellidos">Apellido</label><br>
+                <input type="text" id="apellidos" name="apellidos" class="form-control" required>
               </div>
               <div class="form-group required col-md-6">
                 <label class="control-label" for="nombres">Nombres</label><br>
@@ -130,24 +130,23 @@
 
             <div class="row">
               <div class="form-group required col-md-6">
-                <label class="control-label" for="cuil">CUIT</label><br>
-                <input type="number" id="cuil" name="cuil" class="form-control" required>
+                <label class="control-label" for="cuit">CUIT</label><br>
+                <input type="text" id="cuit" name="cuit" class="form-control" required>
               </div>
               <div class="form-group required col-md-6">
                 <label class="control-label" for="dni">DNI</label><br>
-                <input type="number" id="dni" name="dni" class="form-control" required>
+                <input type="text" id="dni" name="dni" class="form-control" required>
               </div>
             </div>  
 
             <div class="row">
               <div class="form-group required col-md-6">
-                <label class="control-label" for="Fecha">Fecha de Nacimiento</label>
-                <input type="date" id="Fecha" name="Fecha" class="form-control" required>
+                <label class="control-label" for="fecha_nacimiento">Fecha de Nacimiento</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control" required>
               </div>
               <div class="form-group required col-md-6">
                 <label class="control-label" for="nacionalidad">Nacionalidad</label>
                 <select class="custom-select" id="nacionalidad" required>
-                  <option selected></option>
                   <option selected>Seleccione...</option>
                   <option value="argentino">Argentino</option>
                   <option value="extranjero">Extranjero</option>
@@ -166,8 +165,8 @@
                 </select>
               </div>
               <div class="form-group required col-md-6">
-                <label class="control-label" for="genero">Estado Civil</label>
-                <select class="custom-select" id="estadoCivil" required>
+                <label class="control-label" for="estado_civil">Estado Civil</label>
+                <select class="custom-select" id="estado_civil" required>
                   <option selected>Seleccione...</option>
                   <option value="soltero">Soltero</option>
                   <option value="casado">Casado</option>
@@ -187,8 +186,8 @@
                 <input type="email" id="email" name="email" class="form-control" required>
               </div>
               <div class="form-group required col-md-6">
-                <label class="control-label" for="celular">Teléfono celular</label>
-                <input type="tel" id="celular" name="celular" class="form-control" required>
+                <label class="control-label" for="telefono">Teléfono celular</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control" required>
               </div>
             </div>
 
@@ -233,30 +232,7 @@
                 <label class="control-label" for="provincia">Provincia</label><br>
                 <select class="custom-select" id="provincia" class="form-control" required>
                   <option selected>Seleccione...</option>
-                  <option value="Ciudad Autónoma de Buenos Aires">Ciudad Autónoma de Buenos Aires</option>
-                  <option value="Buenos Aires">Buenos Aires</option>
-                  <option value="Catamarca">Catamarca</option>
-                  <option value="Chaco">Chaco</option>
-                  <option value="Chubut">Chubut</option>
-                  <option value="Córdoba">Córdoba</option>
-                  <option value="Corrientes">Corrientes</option>
-                  <option value="Entre Ríos">Entre Ríos</option>
-                  <option value="Formosa">Formosa</option>
-                  <option value="Jujuy">Jujuy</option>
-                  <option value="La Pampa">La Pampa</option>
-                  <option value="La Rioja">La Rioja</option>
-                  <option value="Mendoza">Mendoza</option>
-                  <option value="Misiones">Misiones</option>
-                  <option value="Neuquén">Neuquén</option>
-                  <option value="Río Negro">Río Negro</option>
-                  <option value="Salta">Salta</option>
-                  <option value="San Juan">San Juan</option>
-                  <option value="San Luis">San Luis</option>
-                  <option value="Santa Cruz">Santa Cruz</option>
-                  <option value="Santa Fe">Santa Fe</option>
-                  <option value="Santiago del Estero">Santiago del Estero</option>
-                  <option value="Tierra del Fuego">Tierra del Fuego</option>
-                  <option value="Tucumán">Tucumán</option>
+                
                 </select>
               </div>
             </div>
@@ -267,40 +243,29 @@
             <legend>Datos Laborales</legend>
             <div class="row">
               <div class="form-group required col-md-6">
-                <label class="control-label" for="categoria">Categoría</label>
-                <select id="categoria" name="categoria" class="form-control" required>
+                <label class="control-label" for="categoria_monotributo">Categoría</label>
+                <select id="categoria_monotributo" name="categoria_monotributo" class="form-control" required>
                   <option selected>Seleccione...</option>
-                  <option value="A">Monotributista A</option>
-                  <option value="B">Monotributista B</option>
-                  <option value="C">Monotributista C</option>
-                  <option value="D">Monotributista D</option>
-                  <option value="E">Monotributista E</option>
-                  <option value="F">Monotributista F</option>
-                  <option value="G">Monotributista G</option>
-                  <option value="H">Monotributista H</option>
-                  <option value="I">Monotributista I</option>
-                  <option value="J">Monotributista J</option>
-                  <option value="K">Monotributista K</option>
-                  <option value="RI">Responsable Inscripto</option>
+                
                 </select>
               </div>
 
               <div class="form-group required col-md-6">
-                <label class="control-label" for="titulo">Título / Especialidad / Actividad</label>
-                <input type="text" id="titulo" name="titulo" class="form-control" required>
+                <label class="control-label" for="actividad">Título / Especialidad / Actividad</label>
+                <input type="text" id="actividad" name="actividad" class="form-control" required>
               </div>    
             </div>
             
             <div class="form-check form-group required">
-              <input class="form-check-input" type="checkbox" value="actividad" id="actividad" required>
-              <label class="control-label" class="form-check-label" for="actividad">
+              <input class="form-check-input" type="checkbox" value="actividad" id="chk_actividad" required>
+              <label class="control-label" class="form-check-label" for="chk_actividad">
                 Declaro que mi actividad laboral se encuadra dentro de tareas vinculadas al hardware, software y/o servicios informáticos.
               </label>
             </div>
 
             <div class="form-check form-group required">
-              <input class="form-check-input" type="checkbox" value="cuotaTiempo" id="cuotaTiempo" required>
-              <label class="control-label" class="form-check-label" for="cuotaTiempo">
+              <input class="form-check-input" type="checkbox" value="cuotaTiempo" id="chk_cuota_tiempo" required>
+              <label class="control-label" class="form-check-label" for="chk_cuota_tiempo">
                 Comprendo que para mantener los beneficios de adherente de AGC debo abonar la cuota en tiempo y forma.
               </label>
             </div>
@@ -311,13 +276,13 @@
 
           <div class="row">
             <div class="form-group required col-lg-6">
-              <label class="control-label" for="doc_dni_frente">DNI Frente</label>
+              <label class="control-label" for="doc_dni_frente">DNI Frente (Sólo JPG o JPEG) </label>
               <input id="doc_dni_frente" name="doc_dni_frente" type="file" class="file form-control" data-show-preview="false" data-msg-placeholder="Archivo frente DNI...">
               <small id="archivoHelp" class="form-text text-muted">Imagen o PDF. Máximo 5mb.</small>
             </div>
 
             <div class="form-group required col-lg-6">
-              <label class="control-label" for="doc_dni_dorso">DNI Dorso</label>
+              <label class="control-label" for="doc_dni_dorso">DNI Dorso (Sólo JPG o JPEG)</label>
               <input id="doc_dni_dorso" name="doc_dni_dorso" type="file" class="file form-control" data-show-preview="false" data-msg-placeholder="Archivo dorso DNI...">
               <small id="archivoHelp" class="form-text text-muted">Imagen o PDF. Máximo 5mb.</small>
             </div>
@@ -325,15 +290,14 @@
   
           </fieldset>
 
-          <button type="submit" class="btn btn-primary">Solicitar adhesión</button>
+          <a id="btn_submit" class="btn btn-primary">Solicitar adhesión</a>
         </form>
-        
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+      <script src="../js/adherentes.js"></script>
         <!-- the main fileinput plugin file -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/js/fileinput.min.js"></script>
       </div>
@@ -367,7 +331,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">
@@ -375,11 +339,5 @@
       </div>
     </footer> 
   </body>
-  <script>
-    $(".file").fileinput({
-      language: 'es',
-      showRemove: false,
-      showUpload: false,
-    });
-  </script>
+  
 </html>
